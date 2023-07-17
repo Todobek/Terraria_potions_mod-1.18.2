@@ -1,0 +1,62 @@
+{
+  "item.terrapotions.gel": "Gel",
+
+  "itemGroup.terrapotionstab": "Terraria Potions",
+
+  "effect.terrapotions.ironskin": "Ironskin",
+  "effect.terrapotions.battle": "Battle",
+  "effect.terrapotions.calming": "Calming",
+  "effect.terrapotions.mining": "Mining",
+  "effect.terrapotions.builder": "Builder",
+  "effect.terrapotions.gravitation": "Gravitation",
+  "effect.terrapotions.featherfall" : "Featherfall",
+  "effect.terrapotions.hunter" : "Hunter",
+  "effect.terrapotions.inferno" : "Inferno",
+  "effect.terrapotions.lifeforce" : "Lifeforce",
+  "effect.terrapotions.titan" : "Titan",
+  "effect.terrapotions.thorns" : "Thorns",
+  "effect.terrapotions.waterwalking" :"Water Walking",
+  "effect.terrapotions.drunk" : "Drunk",
+
+  "item.minecraft.potion.effect.ironskin_potion": "Ironskin Potion",
+  "item.minecraft.splash_potion.effect.ironskin_potion" : "Splash Ironskin Potion",
+  "item.minecraft.lingering_potion.effect.ironskin_potion": "Lingering Ironskin Potion",
+
+  "item.minecraft.potion.effect.builder_potion": "Builder Potion",
+  "item.minecraft.splash_potion.effect.builder_potion" : "Splash Builder Potion",
+  "item.minecraft.lingering_potion.effect.builder_potion": "Lingering Builder Potion",
+
+  "item.minecraft.potion.effect.ale": "Ale",
+  "item.minecraft.splash_potion.effect.ale" : "Splash Ale Potion",
+  "item.minecraft.lingering_potion.effect.ale": "Lingering Ale Potion",
+
+  "item.minecraft.potion.effect.featherfall_potion": "Featherfall Potion",
+  "item.minecraft.splash_potion.effect.featherfall_potion" : "Splash Featherfall Potion",
+  "item.minecraft.lingering_potion.effect.featherfall_potion": "Lingering Featherfall Potion",
+
+  "item.minecraft.potion.effect.hunter_potion": "Hunter Potion",
+  "item.minecraft.splash_potion.effect.hunter_potion" : "Splash Hunter Potion",
+  "item.minecraft.lingering_potion.effect.hunter_potion": "Lingering Hunter Potion",
+
+  "item.minecraft.potion.effect.inferno_potion": "Inferno Potion",
+  "item.minecraft.splash_potion.effect.inferno_potion" : "Splash Inferno Potion",
+  "item.minecraft.lingering_potion.effect.inferno_potion": "Lingering Inferno Potion",
+
+  "item.minecraft.potion.effect.lifeforce_potion": "Lifeforce Potion",
+  "item.minecraft.splash_potion.effect.lifeforce_potion" : "Splash Lifeforce Potion",
+  "item.minecraft.lingering_potion.effect.lifeforce_potion": "Lingering Lifeforce Potion",
+
+  "item.minecraft.potion.effect.mining_potion": "Mining Potion",
+  "item.minecraft.splash_potion.effect.mining_potion" : "Splash Mining Potion",
+  "item.minecraft.lingering_potion.effect.mining_potion": "Lingering Mining Potion",
+
+  "item.minecraft.potion.effect.thorns_potion": "Thorns Potion",
+  "item.minecraft.splash_potion.effect.thorns_potion" : "Splash Thorns Potion",
+  "item.minecraft.lingering_potion.effect.thorns_potion": "Lingering Thorns Potion",
+
+  "item.minecraft.potion.effect.titan_potion": "Titan Potion",
+  "item.minecraft.splash_potion.effect.titan_potion" : "Splash Titan Potion",
+  "item.minecraft.lingering_potion.effect.titan_potion": "Lingering Titan Potion",
+
+  "entity.minecraft.villager.terrapotions.terra_alchemist": "Terrapotion Alchemist"
+}
