@@ -34,17 +34,12 @@ public class ModEffects {
     public static final RegistryObject<MobEffect> GRAVITATION = MOB_EFFECTS.register("gravitation",
             () -> new GravitationEffect(MobEffectCategory.BENEFICIAL, 3124687));
 
-    public static final RegistryObject<MobEffect> FEATHERFALL = MOB_EFFECTS.register("featherfall",
-            () -> new FeatherfallEffect(MobEffectCategory.BENEFICIAL, 164180222));
-
     public static final RegistryObject<MobEffect> HUNTER = MOB_EFFECTS.register("hunter",
             () -> new HunterEffect(MobEffectCategory.BENEFICIAL, 24614359));
 
     public static final RegistryObject<MobEffect> INFERNO = MOB_EFFECTS.register("inferno",
             () -> new InfernoEffect(MobEffectCategory.BENEFICIAL, 2447838));
 
-    public static final RegistryObject<MobEffect> LIFEFORCE = MOB_EFFECTS.register("lifeforce",
-            () -> new LifeforceEffect(MobEffectCategory.BENEFICIAL, 2551048));
 
     public static final RegistryObject<MobEffect> TITAN = MOB_EFFECTS.register("titan",
             () -> new TitanEffect(MobEffectCategory.BENEFICIAL, 110010255));

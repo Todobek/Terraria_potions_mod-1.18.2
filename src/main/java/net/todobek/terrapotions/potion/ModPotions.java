@@ -26,17 +26,12 @@ public class ModPotions {
     public static final RegistryObject<Potion> ALE = POTIONS.register("ale",
             () -> new Potion(new MobEffectInstance(ModEffects.DRUNK.get(), 1200, 0)));
 
-    public static final RegistryObject<Potion> FEATHERFALL_POTION = POTIONS.register("featherfall_potion",
-            () -> new Potion(new MobEffectInstance(ModEffects.FEATHERFALL.get(), 600, 0)));
-
     public static final RegistryObject<Potion> HUNTER_POTION = POTIONS.register("hunter_potion",
             () -> new Potion(new MobEffectInstance(ModEffects.HUNTER.get(), 3600, 0)));
 
     public static final RegistryObject<Potion> INFERNO_POTION = POTIONS.register("inferno_potion",
             () -> new Potion(new MobEffectInstance(ModEffects.INFERNO.get(), 4800, 0)));
 
-    public static final RegistryObject<Potion> LIFEFORCE_POTION = POTIONS.register("lifeforce_potion",
-            () -> new Potion(new MobEffectInstance(ModEffects.LIFEFORCE.get(), 6000, 0)));
 
     public static final RegistryObject<Potion> MINING_POTION = POTIONS.register("mining_potion",
             () -> new Potion(new MobEffectInstance(ModEffects.MINING.get(), 6000, 0)));
@@ -46,6 +41,7 @@ public class ModPotions {
 
     public static final RegistryObject<Potion> TITAN_POTION = POTIONS.register("titan_potion",
             () -> new Potion(new MobEffectInstance(ModEffects.TITAN.get(), 4800, 0)));
+
 
 
     public static void register(IEventBus eventBus) {

@@ -73,9 +73,6 @@ public class TerraPotions
                     Items.PUFFERFISH, ModPotions.HUNTER_POTION.get()));
 
             BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
-                    Items.COOKED_SALMON, ModPotions.LIFEFORCE_POTION.get()));
-
-            BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
                     Items.BONE, ModPotions.MINING_POTION.get()));
 
             BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
@@ -97,5 +94,4 @@ public class TerraPotions
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
-
 }

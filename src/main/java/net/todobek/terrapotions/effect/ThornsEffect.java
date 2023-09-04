@@ -11,7 +11,8 @@ import net.minecraft.world.entity.ai.attributes.AttributeMap;
 
 public class ThornsEffect extends MobEffect {
 
-    private boolean notAttacked;
+    private boolean canDamage = true;
+    private int cooldownTicks = 20;
     public ThornsEffect(MobEffectCategory mobEffectCategory, int color) {
         super(mobEffectCategory, color);
     }
@@ -20,19 +21,23 @@ public class ThornsEffect extends MobEffect {
     public void applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
         super.applyEffectTick(pLivingEntity, pAmplifier);
 
-        notAttacked = true;
 
-        if(pLivingEntity.getLastDamageSource() instanceof EntityDamageSource) {
-            if(notAttacked) {
-                Entity entity = pLivingEntity.getLastDamageSource().getEntity();
-                entity.hurt(DamageSource.thorns(pLivingEntity), 1.0F);
-                notAttacked = false;
+        if(pLivingEntity.getLastDamageSource() instanceof EntityDamageSource && canDamage) {
+            Entity entity = pLivingEntity.getLastDamageSource().getEntity();
+
+            if(entity != pLivingEntity) {
+                entity.hurt(DamageSource.thorns(pLivingEntity), 3.0F);
+                canDamage = false;
             }
         }
-
     }
 
+
     public boolean isDurationEffectTick(int pDuration, int pAmplifier) {
+
+        if (pDuration % cooldownTicks == 0) {
+            canDamage = true;
+        }
         return true;
     }
 }

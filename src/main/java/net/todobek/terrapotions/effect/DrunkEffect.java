@@ -12,9 +12,8 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 public class DrunkEffect extends MobEffect {
 
     private boolean applied = false;
-
     private double speed;
-    private double armor;
+    private float armor;
 
     public DrunkEffect(MobEffectCategory mobEffectCategory, int color) {
         super(mobEffectCategory, color);
@@ -22,19 +21,20 @@ public class DrunkEffect extends MobEffect {
     @Override
     public void applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
         super.applyEffectTick(pLivingEntity, pAmplifier);
+        int damageDuration = 20;
+        int damageLevel = 2;
+        pLivingEntity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, damageDuration, damageLevel));
 
         if(!applied) {
+            float x = pLivingEntity.getArmorCoverPercentage();
+            double y = pLivingEntity.getAttribute(Attributes.ATTACK_SPEED).getValue();
+            speed = y;
+            armor = x;
 
-            speed = pLivingEntity.getAttribute(Attributes.ATTACK_SPEED).getValue();
-            armor = pLivingEntity.getArmorCoverPercentage();
 
-            int damageDuration = 20;
-            int damageLevel = 2;
-            pLivingEntity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, damageDuration, damageLevel));
 
-            pLivingEntity.getAttribute(Attributes.ARMOR).setBaseValue(armor-4);
-            pLivingEntity.getAttribute(Attributes.ATTACK_SPEED).setBaseValue(speed+4);
-
+            pLivingEntity.getAttribute(Attributes.ARMOR).setBaseValue(x-2);
+            pLivingEntity.getAttribute(Attributes.ATTACK_SPEED).setBaseValue(y+6.0);
             applied = true;
         }
     }
@@ -43,13 +43,8 @@ public class DrunkEffect extends MobEffect {
         super.removeAttributeModifiers(pLivingEntity, pAttributeMap, pAmplifier);
 
         if(applied) {
-
-            speed = pLivingEntity.getAttribute(Attributes.ATTACK_SPEED).getValue();
-            armor = pLivingEntity.getArmorCoverPercentage();
-
-            pLivingEntity.removeEffect(MobEffects.DAMAGE_BOOST);
-            pLivingEntity.getAttribute(Attributes.ARMOR).setBaseValue(armor+4);
-            pLivingEntity.getAttribute(Attributes.ATTACK_SPEED).setBaseValue(speed-4);
+            pLivingEntity.getAttribute(Attributes.ARMOR).setBaseValue(armor);
+            pLivingEntity.getAttribute(Attributes.ATTACK_SPEED).setBaseValue(speed);
 
             applied = false;
         }

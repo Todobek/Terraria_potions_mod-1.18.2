@@ -30,10 +30,6 @@
   "item.minecraft.splash_potion.effect.ale" : "Splash Ale Potion",
   "item.minecraft.lingering_potion.effect.ale": "Lingering Ale Potion",
 
-  "item.minecraft.potion.effect.featherfall_potion": "Featherfall Potion",
-  "item.minecraft.splash_potion.effect.featherfall_potion" : "Splash Featherfall Potion",
-  "item.minecraft.lingering_potion.effect.featherfall_potion": "Lingering Featherfall Potion",
-
   "item.minecraft.potion.effect.hunter_potion": "Hunter Potion",
   "item.minecraft.splash_potion.effect.hunter_potion" : "Splash Hunter Potion",
   "item.minecraft.lingering_potion.effect.hunter_potion": "Lingering Hunter Potion",

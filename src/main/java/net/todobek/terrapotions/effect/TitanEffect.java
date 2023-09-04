@@ -13,6 +13,7 @@ public class TitanEffect extends MobEffect {
         super(mobEffectCategory, color);
     }
 
+    private double knockback;
 
 
     @Override
@@ -20,7 +21,8 @@ public class TitanEffect extends MobEffect {
         super.applyEffectTick(pLivingEntity, pAmplifier);
 
         if(!applied) {
-            double newKnockback = pLivingEntity.getAttribute(Attributes.ATTACK_KNOCKBACK).getValue() + 2.0;
+            knockback = pLivingEntity.getAttribute(Attributes.ATTACK_KNOCKBACK).getValue();
+            double newKnockback = knockback + 15.0;
 
 
 
@@ -37,8 +39,8 @@ public class TitanEffect extends MobEffect {
 
         if(applied) {
 
-            double newKnockback = pLivingEntity.getAttribute(Attributes.ATTACK_KNOCKBACK).getValue() - 2.0;
-            pLivingEntity.getAttribute(Attributes.ATTACK_KNOCKBACK).setBaseValue(newKnockback);
+            //double newKnockback = pLivingEntity.getAttribute(Attributes.ATTACK_KNOCKBACK).getValue() - 2.0;
+            pLivingEntity.getAttribute(Attributes.ATTACK_KNOCKBACK).setBaseValue(knockback);
 
             applied = false;
         }

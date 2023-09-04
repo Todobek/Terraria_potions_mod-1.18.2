@@ -1,6 +1,9 @@
 package net.todobek.terrapotions.effect;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.font.glyphs.BakedGlyph;
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.*;
@@ -8,6 +11,8 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.item.alchemy.Potion;
+import net.minecraft.world.level.Level;
+import net.minecraftforge.common.ForgeConfig;
 import net.minecraftforge.entity.IEntityAdditionalSpawnData;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraft.resources.ResourceKey;
@@ -19,6 +24,7 @@ import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.event.entity.living.LivingSpawnEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraft.world.entity.monster.Monster;
+import org.apache.logging.log4j.core.jmx.Server;
 
 public class BattleEffect extends MobEffect {
 
@@ -32,7 +38,8 @@ public class BattleEffect extends MobEffect {
         super.applyEffectTick(pLivingEntity, pAmplifier);
 
 
-}
+    }
+
     public boolean isDurationEffectTick(int pDuration, int pAmplifier) {
         return true;
     }

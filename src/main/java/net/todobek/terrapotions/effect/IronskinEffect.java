@@ -12,12 +12,13 @@ public class IronskinEffect extends MobEffect{
     public IronskinEffect(MobEffectCategory mobEffectCategory, int color) {
         super(mobEffectCategory, color);
     }
-
+    private float armor;
 
     public void applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
 
         if(!applied) {
             float x = pLivingEntity.getArmorCoverPercentage();
+            armor = x;
 
             pLivingEntity.getAttribute(Attributes.ARMOR).setBaseValue(x+4);
 
@@ -31,9 +32,9 @@ public class IronskinEffect extends MobEffect{
 
     public void removeAttributeModifiers(LivingEntity pLivingEntity, AttributeMap pAttributeMap, int pAmplifier)  {
             if(applied) {
-                float x = pLivingEntity.getArmorCoverPercentage();
+                //float x = pLivingEntity.getArmorCoverPercentage();
 
-                pLivingEntity.getAttribute(Attributes.ARMOR).setBaseValue(x-4);
+                pLivingEntity.getAttribute(Attributes.ARMOR).setBaseValue(armor);
 
                 applied = false;
             }

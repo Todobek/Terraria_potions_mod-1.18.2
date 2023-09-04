@@ -23,7 +23,7 @@ public class HunterEffect extends MobEffect {
     public void applyEffectTick(LivingEntity pLivingEntity,  int pAmplifier) {
         super.applyEffectTick(pLivingEntity, pAmplifier);
         if(pLivingEntity instanceof Player) {
-            AABB area = pLivingEntity.getBoundingBox().inflate(20);
+            AABB area = pLivingEntity.getBoundingBox().inflate(35);
             for(LivingEntity nearbyEntity : pLivingEntity.level.getEntitiesOfClass(LivingEntity.class, area)) {
                 if(nearbyEntity instanceof Player) {
                     continue;
